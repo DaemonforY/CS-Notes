@@ -114,7 +114,7 @@ public boolean duplicate(int[] nums, int length, int[] duplication) {
         return false;
     for (int i = 0; i < length; i++) {
         while (nums[i] != i) {
-            if (nums[i] == nums[nums[i]]) {
+            if (nums[i] == nums[nums[i]] && i != nums[i]) {
                 duplication[0] = nums[i];
                 return true;
             }
